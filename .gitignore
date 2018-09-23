@@ -310,3 +310,11 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+
+#Nodejs ignore
+
+node_modules
+build
+npm-debug.log
+.env
+.DS_Store
