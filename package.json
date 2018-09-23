@@ -1,0 +1,42 @@
+{
+  "name": "le-cafe",
+  "version": "1.0.0",
+  "description": "Creating a new mobile application that allows customers to place and pay for orders online using a mobile device.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "./node_modules/nodemon/bin/nodemon.js src/app.js --exec 'npm run lint && node'",
+    "lint": "./node_modules/.bin/eslint **/*.js",
+    "eslint": "./node_modules/eslint/bin/eslint.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrRynard/Fox-Holdings-Hospitality-App.git"
+  },
+  "keywords": [
+    "\"Hospitality\"",
+    "\"Mobile\"",
+    "\"Online",
+    "Orders\"",
+    "\"Coffee\"",
+    "\"Coffee",
+    "Shop\"",
+    "\"Le",
+    "Cafe\""
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "bugs": {
+    "url": "https://github.com/MrRynard/Fox-Holdings-Hospitality-App/issues"
+  },
+  "homepage": "https://github.com/MrRynard/Fox-Holdings-Hospitality-App#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.4",
+    "eslint": "^5.6.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
