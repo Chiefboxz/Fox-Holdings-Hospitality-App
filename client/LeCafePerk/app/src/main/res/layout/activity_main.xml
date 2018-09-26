@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/root"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:id="@+id/first_row"
+            android:layout_width="wrap_content"
+            android:layout_height="312dp"
+            android:layout_margin="0dip"
+            android:layout_weight="0.3">
+
+            <Button
+                android:id="@+id/button01"
+                android:layout_width="0dip"
+                android:layout_height="250dp"
+                android:layout_marginTop="60dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_dark"
+                android:onClick="launchOrder"
+                android:padding="15dip"
+                android:text="Order History" />
+
+            <Button
+                android:id="@+id/button02"
+                android:layout_width="0dip"
+                android:layout_height="250dp"
+                android:layout_marginTop="60dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_green_light"
+                android:onClick="launchMenu"
+                android:padding="15dip"
+                android:text="Menu" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/second_row"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="0dip">
+
+            <Button
+                android:id="@+id/button03"
+                android:layout_width="0dip"
+                android:layout_height="250dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_purple"
+                android:padding="15dip"
+                android:text="TBC" />
+
+            <Button
+                android:id="@+id/button04"
+                android:layout_width="0dip"
+                android:layout_height="250dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_red_dark"
+                android:onClick="launchProfile"
+                android:padding="15dip"
+                android:text="Profile" />
+        </TableRow>
+    </TableLayout>
+</android.support.design.widget.CoordinatorLayout>
