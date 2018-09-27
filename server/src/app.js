@@ -1,17 +1,23 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-
-const port = process.env.PORT || 3000
+const path = require('path')
+const { sequelize } = require('./models/init')
+const config = require('./config/config')
 
 const app = express()
-app.use(bodyParser.json())
 
-app.get('/contest', (req, res) => {
+app.use(bodyParser.json())
+app.use('/static', express.static(path.join(__dirname, 'public')))
+
+app.get('/', (req, res) => {
   res.send({
     message: 'Success: Routing is working 100%'
   })
 })
 
-app.listen(port, () => {
-  console.log(`Server started on port ${port}`)
-})
+sequelize.sync()
+  .then(() => {
+    app.listen(config.port, () => {
+      console.log(`Server started on port ${config.port}`)
+    })
+  })
