@@ -24,19 +24,20 @@
     "Cafe"
   ],
   "author": [
-	  {
-	  "name": "Rynard Van der Mescht",
-	  "email": "rynard@webmail.co.za",
-	  "url": "whynothireme.co.za"
-	  },
-	  {
-	  "name": "James Keet",
-	  "email": "keetjames@ymail.com",
-	  "url": "github.com/jkeet"
-	  }
+    {
+      "name": "Rynard Van der Mescht",
+      "email": "rynard@webmail.co.za",
+      "url": "whynothireme.co.za"
+    },
+    {
+      "name": "James Keet",
+      "email": "keetjames@ymail.com",
+      "url": "github.com/jkeet"
+    }
   ],
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "request": "^2.88.0",
