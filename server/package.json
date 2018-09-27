@@ -5,8 +5,8 @@
   "main": "src/app.js",
   "scripts": {
     "start": "./node_modules/nodemon/bin/nodemon.js src/app.js --exec 'npm run lint && node'",
-    "lint": "./node_modules/.bin/eslint **/*.js",
-    "eslint": "./node_modules/eslint/bin/eslint.js"
+    "lint": "./node_modules/.bin/eslint \"**/*.js\"",
+    "eslint": "node ./node_modules/eslint/bin/eslint.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,6 @@
     "Mobile",
     "Online",
     "Orders",
-    "Coffee",
     "Coffee",
     "Shop",
     "Le",
@@ -49,12 +48,12 @@
   },
   "homepage": "https://github.com/MrRynard/Fox-Holdings-Hospitality-App#readme",
   "devDependencies": {
-    "nodemon": "^1.18.4",
     "eslint": "^5.6.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "nodemon": "^1.18.4"
   }
 }
