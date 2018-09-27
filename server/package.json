@@ -23,16 +23,16 @@
     "Le",
     "Cafe"
   ],
-  "author": [
+  "contributors": [
     {
       "name": "Rynard Van der Mescht",
       "email": "rynard@webmail.co.za",
-      "url": "whynothireme.co.za"
+      "url": "http://whynothireme.co.za"
     },
     {
       "name": "James Keet",
       "email": "keetjames@ymail.com",
-      "url": "github.com/jkeet"
+      "url": "https://github.com/jkeet"
     }
   ],
   "license": "ISC",
