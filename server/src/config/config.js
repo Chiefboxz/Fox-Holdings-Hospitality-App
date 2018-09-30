@@ -1,5 +1,5 @@
 module.exports = {
-  port: process.env.PORT || 3000,
+  port: process.env.SERVER_PORT || 3000,
 
   db: {
     name: process.env.DB_NAME || 'lecafe',
@@ -10,8 +10,8 @@ module.exports = {
 
     options: {
       dialect: process.env.DIALECT || 'mysql',
-      host: process.env.HOST || 'localhost',
-      port: process.env.PORT || 3306,
+      host: process.env.DB_HOST || 'localhost',
+      port: process.env.DB_PORT || 3306,
 
       define: {
         underscored: true,
