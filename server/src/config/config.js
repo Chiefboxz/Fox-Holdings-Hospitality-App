@@ -29,5 +29,10 @@ module.exports = {
         acuire: 60000
       }
     }
+  },
+
+  jwt: {
+    secret: process.env.JWT_SECRET || 'LeCafe_Secret',
+    expire: 604800 // One week tokken (One day: 86400)
   }
 }
