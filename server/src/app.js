@@ -3,10 +3,10 @@ const bodyParser = require('body-parser')
 const path = require('path')
 const { sequelize } = require('./models/init')
 
+const api = require('./routes/api-v1')(express)
 const config = require('./config/config')
 
 const app = express()
-const api = require('./routes/api')(express)
 
 app.use(bodyParser.json())
 app.use('/static', express.static(path.join(__dirname, 'public')))
@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
   })
 })
 
-app.use('/api', api)
+app.use('/api/v1/', api)
 
 sequelize.sync()
   .then(() => {
