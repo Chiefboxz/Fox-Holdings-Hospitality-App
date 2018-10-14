@@ -4,7 +4,7 @@
   "description": "Creating a new mobile application that allows customers to place and pay for orders online using a mobile device.",
   "main": "src/app.js",
   "scripts": {
-    "start": "node ./node_modules/nodemon/bin/nodemon.js src/app.js --exec npm run lint && node",
+    "start": "node ./node_modules/nodemon/bin/nodemon.js src/app.js --exec node run lint && node",
     "lint": "node ./node_modules/.bin/eslint \"**/*.js\"",
     "eslint": "node ./node_modules/eslint/bin/eslint.js"
   },
