@@ -11,4 +11,6 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT
     }
   })
+
+  return Ingredients
 }
