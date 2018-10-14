@@ -1,5 +1,6 @@
 package za.co.lecafeperk.lecafeperk;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -31,6 +32,11 @@ public class Profile extends AppCompatActivity {
 
     }
 
+    public void launchRegister (View view){
+        Intent intent = new Intent(Profile.this, registerActivity.class);
+        startActivity(intent);
+    }
+
     public void btnLoginClicked(View v) throws JSONException {
 
         /*Toast toast = Toast.makeText(Profile.this, "No Internet Connection", Toast.LENGTH_LONG);
@@ -41,7 +47,7 @@ public class Profile extends AppCompatActivity {
         EditText txtPasswordInput = (EditText) findViewById(R.id.txtPassword);
         String usernameInput = txtEmailInput.getText().toString();
         String passwordInput = txtPasswordInput.getText().toString();
-        if (usernameInput.contains("@")) {
+        if (usernameInput.contains("@")) {/
 
             RequestQueue MyRequestQueue = Volley.newRequestQueue(this);
             // JSONArray data = new JSONArray();
@@ -61,10 +67,6 @@ public class Profile extends AppCompatActivity {
                     // code to execute when server responds
                 }
 
-
-
-
-
             }, new Response.ErrorListener() { //Create an error listener to handle errors appropriately.
                 @Override
                 public void onErrorResponse(VolleyError error) {
@@ -81,9 +83,6 @@ public class Profile extends AppCompatActivity {
             Toast toast = Toast.makeText(Profile.this, "Please enter a valid email.", Toast.LENGTH_LONG);
             toast.show();
         }
-
-
-
 
     }
 
