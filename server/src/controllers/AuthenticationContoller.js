@@ -25,6 +25,7 @@ exports.login = (req, res) => {
       message: `The entered email is not valid.`
     })
   }
+}
 
   exports.register = async (req, res) => {
     try {
@@ -66,4 +67,3 @@ exports.login = (req, res) => {
       })
     }
   }
-}
