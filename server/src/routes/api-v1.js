@@ -13,6 +13,7 @@ module.exports = (express) => {
    */
 
   // JAMES ADD YOUR ROUTES HERE - LINK THEM TO CONTROLLERS SEE AUTH Controller as example
+  router.post('/updateUser', authenticationController.updateUser)
 
   return router
 }

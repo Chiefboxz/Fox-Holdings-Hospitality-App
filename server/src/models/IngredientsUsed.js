@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       unique: 'compositeIndex'
     },
-	menuID: {
+    menuID: {
       type: DataTypes.INTEGER,
       unique: 'compositeIndex'
     },
@@ -12,3 +12,4 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER
     }
   })
+}

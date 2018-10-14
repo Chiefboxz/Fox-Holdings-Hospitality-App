@@ -1,32 +1,33 @@
+const bcrypt = require('bcrypt')
+
 module.exports = (sequelize, DataTypes) => {
   const Customer = sequelize.define('Customer', {
-    id: {
+    cID: {
       type: DataTypes.INTEGER,
       primaryKey: true
     },
-    firstname: {
+    cFirstname: {
       type: DataTypes.STRING
     },
-    lastname: {
+    cLastname: {
       type: DataTypes.STRING
     },
-    number: {
+    cNumber: {
+      type: DataTypes.INTEGER,
+      unique: true
+    },
+    cEmail: {
       type: DataTypes.STRING,
       unique: true
     },
-    email: {
-      type: DataTypes.STRING,
-      unique: true
-    },
-    password: {
+    cPassword: {
       type: DataTypes.STRING
     }
   })
 
   Customer.prototype.comparePassword = (password) => {
-    // We can compare passwords here with the model
-    // Need to use jwt + passport + bcrypt
-    return password === this.password
+    return bcrypt.compare(password, this.cPassword)
+    // return password === this.password
   }
 
   return Customer

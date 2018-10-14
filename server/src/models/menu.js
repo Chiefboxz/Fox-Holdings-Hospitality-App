@@ -1,18 +1,20 @@
 module.exports = (sequelize, DataTypes) => {
-  sequelize.define('Menu', {
-    id: {
+  const Menu = sequelize.define('Menu', {
+    menuID: {
       type: DataTypes.INTEGER,
       primaryKey: true
     },
-    item: {
-      type: DataTypes.STRING,
-      unique: true
-    },
-    price: {
+    menuItem: {
       type: DataTypes.STRING
     },
-    category: {
-      type: DataTypes.STRING,
+    menuPrice: {
+      type: DataTypes.DOUBLE
+    },
+    menuCatagory: {
+      type: DataTypes.STRING
+    },
+    menuDescription: {
+      type: DataTypes.TEXT
     }
   })
 }
