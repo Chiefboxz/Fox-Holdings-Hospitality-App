@@ -16,7 +16,8 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="#542c1b"
-            android:text="Orders" />
+            android:text="Orders"
+            android:onClick="launchOrder"/>
 
         <Button
             android:id="@+id/launchMenu"
