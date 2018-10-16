@@ -47,7 +47,7 @@ public class Profile extends AppCompatActivity {
         EditText txtPasswordInput = (EditText) findViewById(R.id.txtPassword);
         String usernameInput = txtEmailInput.getText().toString();
         String passwordInput = txtPasswordInput.getText().toString();
-        if (usernameInput.contains("@")) {/
+        if (usernameInput.contains("@")) {
 
             RequestQueue MyRequestQueue = Volley.newRequestQueue(this);
             // JSONArray data = new JSONArray();
@@ -56,7 +56,7 @@ public class Profile extends AppCompatActivity {
             data.put("password", passwordInput);
 
 
-            String url = "http://./server/src/controllers/AuthenticationController/login";
+            String url = "http://192.168.43.175:3000/api/v1/login";
             // StringRequest MyStringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
 
             JsonObjectRequest MyStringRequest = new JsonObjectRequest(Method.POST, url, data , new Response.Listener<JSONObject>() {
@@ -65,6 +65,8 @@ public class Profile extends AppCompatActivity {
                 public void onResponse(JSONObject response) {
 
                     // code to execute when server responds
+                    Toast toast = Toast.makeText(Profile.this, "Server has responded.", Toast.LENGTH_LONG);
+                    toast.show();
                 }
 
             }, new Response.ErrorListener() { //Create an error listener to handle errors appropriately.
