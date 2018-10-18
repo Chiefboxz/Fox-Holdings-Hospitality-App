@@ -47,7 +47,7 @@ public class Profile extends AppCompatActivity {
         EditText txtPasswordInput = (EditText) findViewById(R.id.txtPassword);
         String usernameInput = txtEmailInput.getText().toString();
         String passwordInput = txtPasswordInput.getText().toString();
-        if (usernameInput.contains("@")) {/
+        if (usernameInput.contains("@")) {
 
             RequestQueue MyRequestQueue = Volley.newRequestQueue(this);
             // JSONArray data = new JSONArray();
