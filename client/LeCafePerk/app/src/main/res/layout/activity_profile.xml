@@ -31,8 +31,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:textColor="#fff"
-                android:textColorHint="#fff"
+                android:textColor="#FFFFFF"
+                android:textColorHint="@android:color/white"
                 android:hint="Email" />
         </android.support.design.widget.TextInputLayout>
 
@@ -50,9 +50,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#fff"
-                android:textColorHint="#fff"
                 android:inputType="textPassword"
-                android:hint="Password"/>
+                android:hint="Password"
+                android:textColorHint="#fff"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.v7.widget.AppCompatButton
@@ -64,8 +64,8 @@
             android:padding="12dp"
             android:background="@color/colorAccent"
             android:textColor="#fff"
-            android:onClick="btnLoginClicked"
-            android:text="Login"/>
+            android:text="Login"
+            android:onClick="btnLoginClicked"/>
 
         <TextView
             android:id="@+id/regLaunch"

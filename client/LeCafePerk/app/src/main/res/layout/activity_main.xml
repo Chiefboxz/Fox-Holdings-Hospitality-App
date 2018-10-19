@@ -10,22 +10,26 @@
         android:layout_height="0dp"
         android:layout_weight="1" >
 
-        <Button
+        <ImageButton
             android:id="@+id/launchOrder"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:background="#542c1b"
+            android:background="#000033"
             android:text="Orders"
-            android:onClick="launchOrder"/>
+            android:textColor="@color/colorAccent"
+            android:onClick="launchOrder"
+            android:src="@drawable/success" />
 
-        <Button
+        <ImageButton
             android:id="@+id/launchMenu"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:background="#c18c4a"
+            android:background="#000019"
+            android:textColor="@color/colorAccent"
             android:onClick="launchMenu"
+            android:src="@drawable/restaurant"
             android:text="Menu" />
     </TableRow>
 
@@ -35,21 +39,25 @@
         android:layout_height="0dp"
         android:layout_weight="1" >
 
-        <Button
-            android:id="@+id/button1"
+        <ImageButton
+            android:id="@+id/dialOut"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:background="#ffffff"
-            android:text="TBC" />
+            android:background="#000019"
+            android:onClick="makePhoneCall"
+            android:src="@drawable/phonecall"
+            android:textColor="@color/colorAccent" />
 
-        <Button
+        <ImageButton
             android:id="@+id/launchProfile"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:background="#ffbf7d"
+            android:background="#000033"
             android:onClick="launchProfile"
+            android:textColor="@color/colorAccent"
+            android:src="@drawable/user"
             android:text="Profile" />
     </TableRow>
 

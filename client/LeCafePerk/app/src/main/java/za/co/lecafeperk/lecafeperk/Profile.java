@@ -67,6 +67,7 @@ public class Profile extends AppCompatActivity {
                     // code to execute when server responds
                     Toast toast = Toast.makeText(Profile.this, "Server has responded.", Toast.LENGTH_LONG);
                     toast.show();
+
                 }
 
             }, new Response.ErrorListener() { //Create an error listener to handle errors appropriately.
@@ -75,6 +76,8 @@ public class Profile extends AppCompatActivity {
                     //This code is executed if there is an error.
                     Toast toast = Toast.makeText(Profile.this, "Error connecting to server.", Toast.LENGTH_LONG);
                     toast.show();
+                    System.out.println("Svr Error" + error);
+
                 }
             });
 
