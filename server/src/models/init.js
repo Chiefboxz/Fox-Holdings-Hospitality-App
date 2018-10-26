@@ -21,6 +21,11 @@ fs
     const model = sequelize.import(path.join(__dirname, file))
     db[model.name] = model
   })
+db[Menu].hasMany(db[Order], {as:'menuID'}),
+db[Customer].hasMany(db[Order], {as:'cID'}),
+db[Menu].hasMany(db[IngredientsUsed], {as:'menuID'}),
+db[Ingredients].hasMany(db[IngredientsUsed], {as:'ingreID'})
+  
 
 db.sequelize = sequelize
 db.Sequelize = Sequelize
