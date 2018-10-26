@@ -1,15 +1,13 @@
 module.exports = (sequelize, DataTypes) => {
   const Order = sequelize.define('Order', {
-    cID: {
+    
+    orderID: {
       type: DataTypes.INTEGER,
-      unique: 'compositeIndex'
-    },
-    menuID: {
-      type: DataTypes.INTEGER,
-      unique: 'compositeIndex'
-    },
-    orderDescription: {
-      type: DataTypes.TEXT
+      autoIncrement: true
+  },
+    complete: {
+      type: DataTypes.int,
+      default:0
     },
     orderQuantity: {
       type: DataTypes.INTEGER
@@ -18,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DATE
     },
     orderCollection: {
-      type: DataTypes.STRING
+      type: DataTypes.DATE
     }
   })
 
