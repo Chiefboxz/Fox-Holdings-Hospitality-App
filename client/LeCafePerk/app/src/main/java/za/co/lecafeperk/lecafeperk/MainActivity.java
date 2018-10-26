@@ -11,12 +11,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
 
+import com.backendless.Backendless;
+
 public class MainActivity extends AppCompatActivity {
+
+    //Keys required for backendless 
+    public static final String APP_ID = "A7414F49-A103-12EA-FF8B-1A3A7A91F100";
+    public static final String SECRET_KEY="BF7F491B-4FB6-23FB-FF5C-06D602023A00";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Initiate backendless with app
+        Backendless.initApp(this,APP_ID,SECRET_KEY);
 
         findViewById(R.id.dialOut).setOnClickListener(new View.OnClickListener(){
             @Override
@@ -65,10 +74,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//=======
     public void makePhoneCall(final String phoneNumber) {
       startActivity(new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phoneNumber, null)));
     }
->>>>>>> 5cfab182878854d21d8498e14b7b2b19d1711a4e
+//>>>>>>> 5cfab182878854d21d8498e14b7b2b19d1711a4e
 }
