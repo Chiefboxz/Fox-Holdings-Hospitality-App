@@ -16,6 +16,10 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.backendless.Backendless;
+import com.backendless.BackendlessUser;
+import com.backendless.async.callback.AsyncCallback;
+import com.backendless.exceptions.BackendlessFault;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -45,10 +49,28 @@ public class Profile extends AppCompatActivity {
 
         EditText txtEmailInput = (EditText) findViewById(R.id.txtEmail);
         EditText txtPasswordInput = (EditText) findViewById(R.id.txtPassword);
-        String usernameInput = txtEmailInput.getText().toString();
+        String emailInput = txtEmailInput.getText().toString();
         String passwordInput = txtPasswordInput.getText().toString();
-        if (usernameInput.contains("@")) {
+        if (emailInput.contains("@")) {
 
+            Backendless.UserService.login(emailInput, txtPasswordInput.getText().toString(), new AsyncCallback<BackendlessUser>() {
+                @Override
+                public void handleResponse(BackendlessUser response) {
+                    //Successful login code here
+                    Toast.makeText(getApplicationContext(), "success", Toast.LENGTH_LONG).show();
+                }
+
+                @Override
+                public void handleFault(BackendlessFault fault) {
+                    //unsuccessful login code here
+                    Toast.makeText(getApplicationContext(), "fail", Toast.LENGTH_LONG).show();
+                }
+            });
+
+
+
+           // The following is old code for connecting to node server
+            /*
             RequestQueue MyRequestQueue = Volley.newRequestQueue(this);
             // JSONArray data = new JSONArray();
             JSONObject data = new JSONObject();
@@ -82,7 +104,7 @@ public class Profile extends AppCompatActivity {
             });
 
             MyRequestQueue.add(MyStringRequest);
-
+            */
         }
         else{
             Toast toast = Toast.makeText(Profile.this, "Please enter a valid email.", Toast.LENGTH_LONG);
