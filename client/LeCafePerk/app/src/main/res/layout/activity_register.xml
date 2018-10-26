@@ -104,6 +104,7 @@
             android:layout_marginBottom="24dp"
             android:padding="12dp"
             android:text="Create Account"
+            android:onClick="btnRegister"
             android:background="@color/colorAccent"
             android:textColor="#fff"
             />
